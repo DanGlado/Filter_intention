@@ -10,18 +10,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Filter_intention">
         <activity
-            android:name=".ActivityDate"
-            android:exported="false"
-            android:label="Time basic">
-            <intent-filter>
-                <action android:name="com.example.intent.action.showtime" />
+            android:name=".ActivityName"
+            android:exported="false" />
+        <activity
+            android:name=".Info"
+            android:exported="true">
+            <intent-filter android:label="Info">
+                <action android:name="ru.startandroid.intent.action.showdate" />
+                <action android:name="ru.startandroid.intent.action.showtime" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ActivityTime" android:label="Date basic" android:exported="false">
+        <activity
+            android:name=".ActivityTime"
+            android:exported="true"
+            android:label="Time basic">
             <intent-filter>
-                <action android:name="com.example.intent.action.showdate" />
+                <action android:name="ru.startandroid.intent.action.showtime" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityDate"
+            android:exported="true"
+            android:label="Date basic">
+            <intent-filter>
+                <action android:name="ru.startandroid.intent.action.showdate" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
